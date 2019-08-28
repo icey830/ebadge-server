@@ -7,6 +7,9 @@
     }
   },
  "alias": "ebadge-server.elvns.now.sh",
+ "env": {
+  "BASE_URL": "https://badge.elvns.com"
+  },
  "builds": [
     {
       "src": "server.js",
@@ -16,8 +19,11 @@
   ],
   routes": [
     {
-      "src": "/"
+      "src": "/",
+      "status": 301,
+      "headers": { "Location": "https://elvbadges.elvns.com/" }
     },
-    { "src": "/favicon.ico", "status": 404 }
+    { "src": "/favicon.ico", "status": 404 },
+    { "src": "/(.+)", "dest": "/server.js" }
   ]
 }

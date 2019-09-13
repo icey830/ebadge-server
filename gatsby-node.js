@@ -24,7 +24,7 @@ async function createPages({ actions: { createPage } }) {
     createPage({
       path: '/dev/logos',
       component: require.resolve(
-        './frontend/components/development/logo-page.tsx'
+        './frontend/components/development/logo-page'
       ),
     })
   }

@@ -97,7 +97,7 @@
     "defs": "node scripts/export-service-definitions-cli.js > service-definitions.yml",
     "build": "run-s defs features && gatsby build",
     "start:server:prod": "node server",
-    "now-start": "npm run start:server:prod",
+    "now-start": "node server",
     "start:server:e2e-on-build": "node server 8080",
     "start:server": "cross-env NODE_CONFIG_ENV=development nodemon server 8080",
     "debug:server": "cross-env NODE_CONFIG_ENV=development nodemon --inspect server.js 8080",

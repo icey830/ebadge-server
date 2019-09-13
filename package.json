@@ -93,8 +93,6 @@
     "depcheck": "check-node-version --node \">= 8.0\"",
     "postinstall": "run-s --silent depcheck",
     "prebuild": "run-s --silent depcheck",
-    "features": "node scripts/export-supported-features-cli.js > supported-features.json",
-    "defs": "node scripts/export-service-definitions-cli.js > service-definitions.yml",
     "start:server:prod": "node server",
     "now-start": "node server",
     "start:server:e2e-on-build": "node server 80",
